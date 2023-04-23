@@ -1,0 +1,32 @@
+:root {
+  --c-bg: rgb(24 24 27);
+  --c-default: rgb(247, 248, 248);
+  --c-muted: rgb(189, 189, 189);
+}
+
+html {
+  background-color: var(--c-bg);
+  color: var(--c-default);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.muted {
+  color: var(--c-muted);
+}
+
+.nav a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+  opacity: 0.6;
+  outline: none;
+}
+
+.nav a:hover {
+  opacity: 1;
+  text-decoration-color: inherit;
+}

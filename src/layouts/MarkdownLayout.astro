@@ -1,0 +1,15 @@
+---
+import "~/styles/markdown.css";
+import Layout from "~/layouts/PageLayout.astro";
+export interface Props {}
+const { frontmatter } = Astro.props;
+const title = frontmatter?.title;
+---
+
+<Layout {title}>
+  <section class="px-6 py-16 pt-8 lg:pt-8 mx-auto lg:px-8 lg:py-20 max-w-3xl">
+    <div class="prose m-auto mt-8 mb-8">
+      <slot />
+    </div>
+  </section>
+</Layout>

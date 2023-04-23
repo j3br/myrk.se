@@ -1,0 +1,70 @@
+.prose img {
+    width: 100%;
+}
+
+.prose {
+    --fg: #919191;
+    --fg-deep: #444444;
+    --fg-deeper: #000;
+
+    color: var(--fg);
+}
+
+.prose a {
+    font-weight: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.3);
+    transition: border 0.3s ease-in-out;
+}
+
+.prose a:hover {
+    border-bottom: 1px solid var(--fg);
+}
+
+.prose a code {
+    color: inherit;
+}
+
+.prose hr {
+    height: 1px;
+    width: 50px;
+    margin: 2em auto;
+    background-color: var(--fg-deep);
+}
+
+
+a.item {
+    transition: 0.2s all ease-out;
+    text-decoration: none;
+    border-bottom: none !important;
+    opacity: 0.6;
+}
+
+a.item:hover {
+    opacity: 1;
+}
+
+.prose blockquote {
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5em;
+    padding: 0.6em 1.2em;
+    opacity: 0.8;
+    border-left: 3px solid var(--fg-deep);
+}
+
+.prose blockquote> :first-child {
+    margin-top: 0;
+}
+
+.prose blockquote> :last-child {
+    margin-bottom: 0;
+}
+
+.prose blockquote p:first-of-type::before {
+    content: none;
+}
+
+.prose blockquote p:first-of-type::after {
+    content: none;
+}

@@ -1,0 +1,25 @@
+---
+import Layout from "~/layouts/BaseLayout.astro";
+import Header from "~/components/widgets/Header.astro";
+import Footer from "~/components/widgets/Footer.astro";
+import headerData from "~/config/components/header.js";
+import footerData from "~/config/components/footer.js";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+  <slot name="header">
+    <Header {...headerData} isSticky position="right" />
+  </slot>
+  <main class="min-h-[60vh] 2xl:min-h-[400px]">
+    <slot />
+  </main>
+  <slot name="footer">
+    <Footer {...footerData} />
+  </slot>
+</Layout>

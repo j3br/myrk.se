@@ -1,0 +1,28 @@
+---
+import SITE from "~/config/site/config.mjs";
+import Layout from "~/layouts/PageLayout.astro";
+import Block from "~/components/widgets/Block.astro";
+
+const title = SITE.name;
+---
+
+<Layout title={title}>
+  <main>
+    <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
+      <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+        <Block
+          enabled={true}
+          title={"jfjhk"}
+          subtitle={"dfgs"}
+          highlight={"dfgsf"}
+          content={"dfgsdf"}
+          image={{
+            enabled: true,
+            src: import("~/assets/images/hz.png"),
+            alt: "-",
+          }}
+        />
+      </div>
+    </div>
+  </main>
+</Layout>

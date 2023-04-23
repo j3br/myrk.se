@@ -1,0 +1,21 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import { Icon } from "astro-icon";
+import { getHomePermalink } from '~/utils/permalinks'
+
+const title = "404";
+---
+
+<Layout title={title}>
+  <section class="flex items-center p-16 h-[calc(100vh - 72px)]">
+    <div
+      class="container flex flex-col items-center justify-center px-5 mx-auto my-8"
+    >
+      <h2 class="mb-8 font-bold text-7xl muted">
+        <span class="sr-only">Error</span>
+        <span>404</span>
+      </h2>
+      <Icon name="tabler:dots" class="w-8 h-8 muted" />
+    </div>
+  </section>
+</Layout>
