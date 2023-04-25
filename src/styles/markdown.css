@@ -3,11 +3,14 @@
 }
 
 .prose {
-    --fg: #919191;
-    --fg-deep: #444444;
-    --fg-deeper: #000;
+    --fg: #bbb;
+    --fg-deep: #d3d3d3;
+    --fg-deeper: #ececec;
 
     color: var(--fg);
+    max-width: 65ch;
+    font-size: 1rem;
+    line-height: 1.75;
 }
 
 .prose a {
@@ -29,9 +32,14 @@
     height: 1px;
     width: 50px;
     margin: 2em auto;
-    background-color: var(--fg-deep);
+    background-color: rgba(125, 125, 125, 0.3);
+    /* background-color: var(--fg-deep); */
 }
 
+.prose strong {
+    color: var(--fg-deep);
+    font-weight: 600;
+}
 
 a.item {
     transition: 0.2s all ease-out;
@@ -50,7 +58,8 @@ a.item:hover {
     line-height: 1.5em;
     padding: 0.6em 1.2em;
     opacity: 0.8;
-    border-left: 3px solid var(--fg-deep);
+    /* border-left: 3px solid var(--fg-deep); */
+    border-left: 4px solid rgba(125, 125, 125, 0.3);
 }
 
 .prose blockquote> :first-child {
@@ -66,5 +75,93 @@ a.item:hover {
 }
 
 .prose blockquote p:first-of-type::after {
+    content: none;
+}
+
+.prose h1 {
+    color: var(--fg-deep);
+    font-weight: 700;
+    font-size: 2.25em;
+    margin-top: 0;
+    margin-bottom: 0.8888889em;
+    line-height: 1.1111111;
+}
+
+.prose h2 {
+    color: var(--fg-deep);
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    line-height: 1.3333333;
+}
+
+.prose h3 {
+    color: inherit;
+    font-weight: 600;
+    font-size: 1.25em;
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+    line-height: 1.6;
+    opacity: 0.7;
+}
+
+.prose h4 {
+    color: inherit;
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+}
+
+.prose code {
+    color: var(--fg-deep);
+    font-weight: 600;
+    font-size: 0.875em;
+}
+
+.prose code::before {
+    content: "`";
+}
+
+.prose code::after {
+    content: "`";
+}
+
+.prose a code {
+    color: #111827;
+}
+
+.prose pre {
+    color: #e5e7eb;
+    overflow-x: auto;
+    font-size: 0.875em;
+    line-height: 1.7142857;
+    margin-top: 1.7142857em;
+    margin-bottom: 1.7142857em;
+    border-radius: 0.375rem;
+    padding-top: 0.8571429em;
+    padding-right: 1.1428571em;
+    padding-bottom: 0.8571429em;
+    padding-left: 1.1428571em;
+}
+
+.prose pre code {
+    background-color: transparent;
+    border-width: 0;
+    border-radius: 0;
+    padding: 0;
+    font-weight: 400;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}
+
+.prose pre code::before {
+    content: none;
+}
+
+.prose pre code::after {
     content: none;
 }
