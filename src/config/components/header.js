@@ -3,24 +3,24 @@ import { getHomePermalink, getPermalink } from "~/utils/permalinks";
 const headerData = {
   links: [
     {
-      text: "kjvg",
+      text: "Kjvg",
       links: [
         {
-          text: "dff",
+          text: "Dff",
           href: "#",
         }
       ]
     },
     {
-      text: "foo",
+      text: "Foo",
       href: getPermalink("/foo"),
     },
     {
-      text: "bar",
-      href: getPermalink("/bar"),
+      text: "About",
+      href: getPermalink("/about"),
     },
     {
-      text: "baz",
+      text: "Baz",
       href: getPermalink("/baz"),
     },
     {
