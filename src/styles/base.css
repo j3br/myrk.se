@@ -2,11 +2,15 @@
   --c-bg: rgb(24 24 27);
   --c-default: rgb(247, 248, 248);
   --c-muted: rgb(189, 189, 189);
+
+  --fg: #bbb;
+  --fg-deep: #d3d3d3;
+  --fg-deeper: #ececec;
 }
 
 html {
   background-color: var(--c-bg);
-  color: var(--c-default);
+  color: var(--fg);
 }
 
 .dropdown:hover .dropdown-menu {
