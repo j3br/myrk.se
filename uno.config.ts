@@ -6,6 +6,7 @@ import {
   presetTypography,
   presetWebFonts,
 } from "unocss";
+import transformerDirectives from '@unocss/transformer-directives'
 
 export default defineConfig({
   theme: {
@@ -44,4 +45,7 @@ export default defineConfig({
       },
     }),
   ],
+  transformers: [
+    transformerDirectives(),
+  ]
 });
