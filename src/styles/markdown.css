@@ -33,7 +33,6 @@
     width: 50px;
     margin: 2em auto;
     background-color: rgba(125, 125, 125, 0.3);
-    /* background-color: var(--fg-deep); */
 }
 
 .prose strong {
@@ -164,4 +163,16 @@ a.item:hover {
 
 .prose pre code::after {
     content: none;
+}
+
+.prose figure figcaption {
+    color: #808183;
+    font-size: 0.875em;
+    line-height: 1.4285714;
+    margin-top: 0.8571429em;
+}
+
+.prose figure {
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
