@@ -21,6 +21,19 @@ html {
   color: var(--c-muted);
 }
 
+.btn {
+  @apply inline-flex items-center justify-center bg-transparent font-medium text-center text-base leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 border-gray-800 border;
+  border-radius: 10px;
+}
+.btn-primary {
+  /* TODO change this style */
+  @apply border-none shadow-none bg-gray-900/30 hover:text-gray-100 hover:bg-gray-900/50;
+}
+
+.btn-ghost {
+  @apply border-none shadow-none bg-gray-900/30 hover:text-gray-100 hover:bg-gray-900/50;
+}
+
 .nav a {
   cursor: pointer;
   text-decoration: none;
@@ -39,6 +52,7 @@ html {
   @apply bg-[#18181B];
   box-shadow: none;
 }
+
 #header.expanded nav {
   position: fixed;
   top: 70px;
@@ -46,4 +60,9 @@ html {
   right: 0;
   bottom: 70px !important;
   padding: 0 5px;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
