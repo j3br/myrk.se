@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import { defineConfig } from "astro/config";
 import image from "@astrojs/image";
 import UnoCSS from "unocss/astro";
+import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
 
 import SITE from "./src/config/site/config.mjs";
 
@@ -15,6 +16,10 @@ export default defineConfig({
   trailingSlash: SITE.trailingSlash ? "always" : "never",
 
   output: "static",
+
+  markdown: {
+    remarkPlugins: [readingTimeRemarkPlugin],
+  },
 
   integrations: [
     UnoCSS({ injectReset: true }),
