@@ -19,8 +19,3 @@ Feel free to reach out via DM or email.
 ```sh
 echo -n 'amVickBteXJrLnNl' | base64 --decode 
 ```
-
-
-#
-![laban sleeping](src/assets/images/slp.jpg "Laban")
-_( zzz... )_
