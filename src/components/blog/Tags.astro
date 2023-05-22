@@ -1,0 +1,30 @@
+---
+import { getPermalink } from '~/utils/permalinks';
+import type { Post } from '~/types';
+import { isBlogTagRouteEnabled } from '~/utils/blog';
+export interface Props {
+  tags: Post['tags'];
+  class?: string;
+}
+const { tags, class: className = 'text-sm' } = Astro.props;
+---
+{
+  tags && Array.isArray(tags) && (
+    <ul class={className}>
+      {tags.map((tag) => (
+        <li class="bg-zinc-800/60 inline-block mr-2 mb-2 py-0.5 px-2 lowercase rounded">
+          {!isBlogTagRouteEnabled ? (
+            tag
+          ) : (
+            <a
+              href={getPermalink(tag, 'tag')}
+              class="hover:text-gray-100 transition ease-in duration-100"
+            >
+              {tag}
+            </a>
+          )}
+        </li>
+      ))}
+    </ul>
+  )
+}

@@ -1,0 +1,22 @@
+---
+import "~/styles/markdown.css";
+import Layout from '~/layouts/PageLayout.astro';
+import SinglePost from '~/components/blog/SinglePost.astro';
+import ToBlogLink from '~/components/blog/ToBlogLink.astro';
+import { getCanonical, getPermalink } from '~/utils/permalinks';
+import { getStaticPathsBlogPost } from '~/utils/blog';
+import { findImage } from '~/utils/images';
+
+export const getStaticPaths = getStaticPathsBlogPost;
+
+const { post } = Astro.props;
+const url = getCanonical(getPermalink(post.permalink, 'post'));
+const image = await findImage(post.image);
+
+const title = post.title;
+---
+
+<Layout {title}>
+    <SinglePost post={{ ...post, image: image }} url={url} />
+    <ToBlogLink />
+  </Layout>

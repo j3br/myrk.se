@@ -1,0 +1,25 @@
+---
+import { getStaticPathsBlogList } from '~/utils/blog';
+import Layout from '~/layouts/PageLayout.astro';
+import BlogList from '~/components/blog/List.astro';
+import Headline from '~/components/blog/Headline.astro';
+import Pagination from '~/components/blog/Pagination.astro';
+
+export const getStaticPaths = getStaticPathsBlogList;
+
+const { page } = Astro.props;
+const currentPage = page.currentPage ?? 1;
+const title = `Blog${currentPage > 1 ? ` — Page ${currentPage}` : ""}`;
+---
+
+<Layout {title}>
+  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+    <Headline
+      title="Blog"
+      subtitle="Thoughts and ramblings"
+    >
+    </Headline>
+    <BlogList posts={page.data} />
+    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+  </section>
+</Layout>

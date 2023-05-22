@@ -1,15 +1,25 @@
-export interface MetaData {
-  title?: string;
-  ignoreTitleTemplate?: boolean;
+import { AstroComponentFactory } from 'astro/dist/runtime/server';
 
-  canonical?: string;
+export interface Post {
+	id: string;
+	slug: string;
+	permalink: string;
 
-  robots?: MetaDataRobots;
+	publishDate: Date;
+	updateDate?: Date;
 
-  description?: string;
-}
+	title: string;
+	excerpt?: string;
+	image?: string;
 
-export interface MetaDataRobots {
-  index?: boolean;
-  follow?: boolean;
+	category?: string;
+	tags?: Array<string>;
+	author?: string;
+
+	draft?: boolean;
+
+	Content?: AstroComponentFactory;
+	content?: string;
+
+	readingTime?: number;
 }

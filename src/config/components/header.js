@@ -1,19 +1,10 @@
-import { getHomePermalink, getPermalink } from "~/utils/permalinks";
+import { getPermalink, getBlogPermalink } from "~/utils/permalinks";
 
 const headerData = {
   links: [
     {
-      text: "Kjvg",
-      links: [
-        {
-          text: "Dff",
-          href: "#",
-        }
-      ]
-    },
-    {
-      text: "Foo",
-      href: getPermalink("/foo"),
+      text: "Blog",
+      href: getBlogPermalink(),
     },
     {
       text: "About",
