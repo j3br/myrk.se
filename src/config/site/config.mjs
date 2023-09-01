@@ -1,5 +1,5 @@
 const CONFIG = {
-  name: "myrk",
+  name: "∆",
 
   site: "https://myrk.se",
   base: "/",
