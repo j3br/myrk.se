@@ -2,7 +2,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 import { defineConfig } from "astro/config";
-import image from "@astrojs/image";
 import UnoCSS from "unocss/astro";
 import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
 
@@ -23,9 +22,9 @@ export default defineConfig({
 
   integrations: [
     UnoCSS({ injectReset: true }),
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
+    //image({
+    //  serviceEntryPoint: "@astrojs/image/sharp",
+    //}),
   ],
   vite: {
     optimizeDeps: {
