@@ -7,10 +7,9 @@ layout: '~/layouts/MarkdownLayout.astro'
 > It could always be worse.
 
 
-## Things that interest me
-In no particular order
+Things that interest me - in no particular order:
 
-* Linux, open-source, automation
+* Linux, open-source
 * Cats
 * Programming
 
