@@ -9,14 +9,14 @@ export const getStaticPaths = getStaticPathsBlogList;
 
 const { page } = Astro.props;
 const currentPage = page.currentPage ?? 1;
-const title = `Blog${currentPage > 1 ? ` — Page ${currentPage}` : ""}`;
+const title = `Posts${currentPage > 1 ? ` — Page ${currentPage}` : ""}`;
 ---
 
 <Layout {title}>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline
-      title="Blog"
-      subtitle="Thoughts and ramblings"
+      title="Posts"
+      subtitle="Random thoughts and ramblings"
     >
     </Headline>
     <BlogList posts={page.data} />
