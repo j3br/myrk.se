@@ -6,6 +6,8 @@
     --fg: #bbb;
     --fg-deep: #d3d3d3;
     --fg-deeper: #ececec;
+    --fg-red: #ff6266;
+    --bg-deep: #26262e;
 
     color: var(--fg);
     max-width: 48rem;
@@ -115,16 +117,17 @@ a.item:hover {
 
 .prose code {
     color: var(--fg-deep);
+    background-color: var(--bg-deep);
     font-weight: 600;
     font-size: 0.875em;
 }
 
 .prose code::before {
-    content: "`";
+    content: "";
 }
 
 .prose code::after {
-    content: "`";
+    content: "";
 }
 
 .prose a code {
