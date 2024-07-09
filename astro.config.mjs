@@ -18,6 +18,9 @@ export default defineConfig({
 
   markdown: {
     remarkPlugins: [readingTimeRemarkPlugin],
+    shikiConfig: {
+      theme: 'vesper',
+    },
   },
 
   integrations: [
