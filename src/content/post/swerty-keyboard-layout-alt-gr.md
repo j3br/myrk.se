@@ -8,19 +8,19 @@ tags:
   - linux
 ---
 
-Posting this so that I can look it up later when I need it again.
+Posting this so that I can look it up later when I need it again. I use this setup with my HHKB.
 
 
 The Swerty keyboard layout, created by Johan E. Gustafsson, can be found [here](http://johanegustafsson.net/projects/swerty/).
 
 ## Installation
 
-### 1. Add Swerty Layout to Symbols
+#### 1. Add Swerty Layout to Symbols
 Append the contents of [se.txt](/assets/swerty/se.txt) to the end of the file `/usr/share/X11/xkb/symbols/se`:
 ```bash
 $ sudo bash -c 'cat se.txt >> /usr/share/X11/xkb/symbols/se'
 ```
-### 2. Modify `evdev.xml`
+#### 2. Modify `evdev.xml`
 Edit the file `/usr/share/X11/xkb/rules/evdev.xml` and add the Swerty variant:
 ```xml
 <layout>
@@ -41,7 +41,7 @@ Edit the file `/usr/share/X11/xkb/rules/evdev.xml` and add the Swerty variant:
   </variantList>
 </layout>
 ```
-### 3. Modify `evdev.lst`
+#### 3. Modify `evdev.lst`
 Update `/usr/share/X11/xkb/rules/evdev.lst` to include the Swerty layout:
 ```
 ! variant
