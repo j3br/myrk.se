@@ -17,7 +17,7 @@ The Swerty keyboard layout, created by Johan E. Gustafsson, can be found [here](
 
 #### 1. Add Swerty Layout to Symbols
 Append the contents of [se.txt](/assets/swerty/se.txt) to the end of the file `/usr/share/X11/xkb/symbols/se`:
-```bash
+```console
 $ sudo bash -c 'cat se.txt >> /usr/share/X11/xkb/symbols/se'
 ```
 #### 2. Modify `evdev.xml`
