@@ -1,13 +1,15 @@
 import { currentYear } from "~/utils/utils";
 
 const poweredByMessages = [
-  "Powered by twisted logic",
-  "Powered by irony and despair",
-  "Powered by quantum entanglement",
+  "twisted logic",
+  "irony and despair",
+  "quantum entanglement",
+  "cosmic rays",
+  "serendipity",
 ];
 const randomMessage = poweredByMessages[Math.floor(Math.random() * poweredByMessages.length)];
 
 const footerData = {
-  footNote: '© ' + currentYear + ' · ' + randomMessage
+  footNote: '© ' + currentYear + ' · Powered by ' + randomMessage
 };
 export default footerData;
