@@ -12,6 +12,7 @@
     "lint:eslint": "eslint . --ext .js,.ts,.astro"
   },
   "devDependencies": {
+    "@types/node": "^20.14.11",
     "@unocss/preset-typography": "^0.53.3",
     "@unocss/reset": "^0.53.3",
     "@unocss/transformer-directives": "^0.53.3",
