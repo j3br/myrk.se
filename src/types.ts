@@ -1,25 +1,25 @@
 import { AstroComponentFactory } from 'astro/dist/runtime/server';
 
 export interface Post {
-	id: string;
-	slug: string;
-	permalink: string;
+  id: string;
+  slug: string;
+  permalink: string;
 
-	publishDate: Date;
-	updateDate?: Date;
+  publishDate: Date;
+  updateDate?: Date;
 
-	title: string;
-	excerpt?: string;
-	image?: string;
+  title: string;
+  excerpt?: string;
+  image?: string;
 
-	category?: string;
-	tags?: Array<string>;
-	author?: string;
+  category?: string;
+  tags?: Array<string>;
+  author?: string;
 
-	draft?: boolean;
+  draft?: boolean;
 
-	Content?: AstroComponentFactory;
-	content?: string;
+  Content?: AstroComponentFactory;
+  content?: string;
 
-	readingTime?: number;
+  readingTime?: number;
 }
