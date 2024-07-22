@@ -7,9 +7,10 @@ const poweredByMessages = [
   "cosmic rays",
   "serendipity",
 ];
-const randomMessage = poweredByMessages[Math.floor(Math.random() * poweredByMessages.length)];
+const randomMessage =
+  poweredByMessages[Math.floor(Math.random() * poweredByMessages.length)];
 
 const footerData = {
-  footNote: '© ' + currentYear + ' · Powered by ' + randomMessage
+  footNote: "© " + currentYear + " · Powered by " + randomMessage,
 };
 export default footerData;

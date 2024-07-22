@@ -1,15 +1,15 @@
 export default {
-    language: 'en',
-    textDirection: 'ltr',
-  
-    dateFormatter: new Intl.DateTimeFormat('en', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-      timeZone: 'CET',
-    }),
+  language: "en",
+  textDirection: "ltr",
 
-    numberFormatter: new Intl.NumberFormat('en', {
-      notation: 'compact',
-    }),
+  dateFormatter: new Intl.DateTimeFormat("en", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    timeZone: "CET",
+  }),
+
+  numberFormatter: new Intl.NumberFormat("en", {
+    notation: "compact",
+  }),
 };

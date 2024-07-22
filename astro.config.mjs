@@ -1,9 +1,9 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
+import path from "path";
+import { fileURLToPath } from "url";
 
 import { defineConfig } from "astro/config";
 import UnoCSS from "unocss/astro";
-import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
+import { readingTimeRemarkPlugin } from "./src/utils/frontmatter.mjs";
 
 import SITE from "./src/config/site/config.mjs";
 
@@ -19,22 +19,18 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [readingTimeRemarkPlugin],
     shikiConfig: {
-      theme: 'vesper',
+      theme: "vesper",
     },
   },
 
-  integrations: [
-    UnoCSS({ injectReset: true }),
-  ],
+  integrations: [UnoCSS({ injectReset: true })],
   vite: {
     optimizeDeps: {
-      exclude: [
-        'limax',
-      ],
+      exclude: ["limax"],
     },
     resolve: {
       alias: {
-        '~': path.resolve(__dirname, './src'),
+        "~": path.resolve(__dirname, "./src"),
       },
     },
   },

@@ -3,30 +3,30 @@ export default {
   postsPerPage: 5,
   post: {
     isEnabled: true,
-    permalink: '/%slug%', // Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+    permalink: "/%slug%", // Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
     robots: {
       index: true,
-    }
+    },
   },
   list: {
     isEnabled: true,
-    pathname: 'posts',
+    pathname: "posts",
     robots: {
       index: true,
-    }
+    },
   },
   category: {
     isEnabled: true,
-    pathname: 'category',
+    pathname: "category",
     robots: {
       index: true,
-    }
+    },
   },
   tag: {
     isEnabled: true,
-    pathname: 'tag',
+    pathname: "tag",
     robots: {
       index: false,
-    }
+    },
   },
 };

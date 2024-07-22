@@ -12,11 +12,10 @@ export const getStaticPaths = getStaticPathsBlogPost;
 const { post } = Astro.props;
 const url = getCanonical(getPermalink(post.permalink, 'post'));
 const image = await findImage(post.image);
-
 const title = post.title;
 ---
 
 <Layout {title}>
     <SinglePost post={{ ...post, image: image }} url={url} />
     <ToBlogLink />
-  </Layout>
+</Layout>

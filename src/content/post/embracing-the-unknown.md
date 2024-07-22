@@ -1,11 +1,11 @@
 ---
 publishDate: 2023-09-10T21:25:00Z
 title: Embracing the Unknown
-excerpt: Tackling Imposter Syndrome 
+excerpt: Tackling Imposter Syndrome
 image: /assets/bw.png
 ---
 
-Tomorrow's the big day – I'm starting a new job. 
+Tomorrow's the big day – I'm starting a new job.
 
 The nerves are real, and all those worries I used to save for "future me" have now inevitably become present-me problems.
 
