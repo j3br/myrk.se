@@ -25,9 +25,6 @@ export default defineConfig({
 
   integrations: [
     UnoCSS({ injectReset: true }),
-    //image({
-    //  serviceEntryPoint: "@astrojs/image/sharp",
-    //}),
   ],
   vite: {
     optimizeDeps: {
