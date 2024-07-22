@@ -4,12 +4,26 @@ import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
 import Headline from '~/components/blog/Headline.astro';
 import Pagination from '~/components/blog/Pagination.astro';
+import type { Post } from "~/types";
 
 export const getStaticPaths = getStaticPathsBlogList;
 
-const { page } = Astro.props;
+type PageProps = {
+  currentPage?: number;
+  data?: Array<Post>;
+  url?: {
+    prev?: string;
+    next?: string;
+  };
+};
+
+const { page } = Astro.props as { page: PageProps };
 const currentPage = page.currentPage ?? 1;
 const title = `Posts${currentPage > 1 ? ` — Page ${currentPage}` : ""}`;
+
+const prevUrl = page.url?.prev ?? '';
+const nextUrl = page.url?.next ?? '';
+const posts = page.data ?? [];
 ---
 
 <Layout {title}>
@@ -19,7 +33,7 @@ const title = `Posts${currentPage > 1 ? ` — Page ${currentPage}` : ""}`;
       subtitle="Random thoughts and ramblings"
     >
     </Headline>
-    <BlogList posts={page.data} />
-    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+    <BlogList posts={posts} />
+    <Pagination prevUrl={prevUrl} nextUrl={nextUrl} />
   </section>
 </Layout>
