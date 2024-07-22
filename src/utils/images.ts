@@ -1,18 +1,18 @@
-const load = async function () {
+const load = async function() {
   let images: Record<string, () => Promise<unknown>> | undefined = undefined;
   try {
-    images = import.meta.glob("/src/assets/images/**");
+    images = import.meta.glob('~/assets/images/**/*.{jpeg,jpg,png,tiff,webp,gif,svg,JPEG,JPG,PNG,TIFF,WEBP,GIF,SVG}');
   } catch (e) {
     // continue regardless of error
   }
   return images;
 };
 
-let _images: Promise<Record<string, () => Promise<unknown>> | undefined>;
+let _images: Record<string, () => Promise<unknown>> | undefined = undefined;
 
 export const fetchLocalImages = async () => {
-  _images = _images || load();
-  return await _images;
+  _images = _images || (await load());
+  return _images;
 };
 
 type ImageModule = {
@@ -32,7 +32,7 @@ export const findImage = async (imagePath?: string): Promise<string | null> => {
     return imagePath;
   }
 
-  if (!imagePath.startsWith("~/assets")) {
+  if (!imagePath.startsWith("~/assets/images")) {
     return imagePath; // FIXME: Fix relative images
   }
 
