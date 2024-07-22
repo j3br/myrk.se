@@ -2,7 +2,7 @@
 publishDate: 2023-09-10T21:25:00Z
 title: Embracing the Unknown
 excerpt: Tackling Imposter Syndrome
-image: /assets/bw.png
+image: ~/assets/images/bw.png
 ---
 
 Tomorrow's the big day – I'm starting a new job.

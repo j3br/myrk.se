@@ -32,7 +32,7 @@ Just like its inspirator the bot offers three commands:
 With this, even the most technically inept can easily power-cycle the server with one simple command through Discord.
 
 <figure>
-  <img src="/assets/bot.png" alt="Bot commands demo"/>
+<img src="/assets/bot.png" alt="Bot commands demo"/>
   <figcaption>Easy peasy!</figcaption>
 </figure>
 

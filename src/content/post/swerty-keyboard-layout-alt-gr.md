@@ -2,7 +2,7 @@
 publishDate: 2024-06-24T18:22:00Z
 title: Swerty Keyboard Layout Installation on Linux
 excerpt: With working Alt-Gr
-image: /assets/kbd.png
+image: ~/assets/images/kbd.png
 
 tags:
   - linux
