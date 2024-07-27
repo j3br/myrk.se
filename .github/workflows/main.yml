@@ -33,4 +33,4 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         source: "dist/*"
-        target: "/srv/docker/myrk.se/config/www/"
+        target: "/uploads/www/"
