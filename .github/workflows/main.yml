@@ -35,3 +35,4 @@ jobs:
         source: "dist/*"
         target: "/srv/docker/myrk.se/config/www/"
         overwrite: true
+        strip_components: 1
