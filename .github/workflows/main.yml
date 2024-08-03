@@ -33,5 +33,5 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         source: "dist/*"
-        target: "/uploads/www/"
+        target: "/srv/docker/myrk.se/config/www/"
         overwrite: true
