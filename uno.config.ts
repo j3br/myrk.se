@@ -2,11 +2,11 @@ import {
   defineConfig,
   presetAttributify,
   presetIcons,
-  presetUno,
+  presetWind3,
   presetTypography,
   presetWebFonts,
+  transformerDirectives,
 } from "unocss";
-import transformerDirectives from "@unocss/transformer-directives";
 
 export default defineConfig({
   theme: {
@@ -36,7 +36,7 @@ export default defineConfig({
       },
     }),
     presetAttributify(),
-    presetUno(),
+    presetWind3(),
     presetTypography(),
     presetWebFonts({
       fonts: {
